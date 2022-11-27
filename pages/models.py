@@ -8,3 +8,8 @@ class SiteInfo(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class About(models.Model):
+    image = models.ImageField()
+    text = models.TextField(max_length=2000)
