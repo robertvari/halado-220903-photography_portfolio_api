@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 class SiteInfo(models.Model):
     name = models.CharField(max_length=200)
@@ -11,5 +12,13 @@ class SiteInfo(models.Model):
 
 
 class About(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(
+        upload_to="about", 
+        help_text="Selectyour profile picture. (.jpg)",
+        validators=[FileExtensionValidator(["jpg", "jpeg", "png"])]
+        )
+
     text = models.TextField(max_length=2000)
+
+    def __str__(self) -> str:
+        return self.text
