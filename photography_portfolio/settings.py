@@ -118,7 +118,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = BASE_DIR = "static"
+# my settings for static and media folders
+STATICFILES_DIRS = [BASE_DIR / "static_dev"]
+STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
