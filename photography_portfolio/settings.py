@@ -72,7 +72,7 @@ ROOT_URLCONF = 'photography_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "react/build"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,7 +136,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # my settings for static and media folders
-STATICFILES_DIRS = [BASE_DIR / "static_dev"]
+STATICFILES_DIRS = [BASE_DIR / "react/build/static"]
 STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = "/media/"
