@@ -54,7 +54,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://robertvari.pythonanywhere.com"
+    "https://robertvari.pythonanywhere.com"
 ]
 
 MIDDLEWARE = [
